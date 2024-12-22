@@ -1,4 +1,4 @@
-import { Plugin } from "obsidian";
+import { Plugin, Platform } from "obsidian";
 import { promisify } from "util";
 import * as fs from "fs/promises";
 
@@ -98,12 +98,12 @@ export default class CupertinoCompanion extends Plugin {
     if (this.isInitialized) return;
     this.isInitialized = true;
 
-    if (process.platform === "darwin") {
+    if (Platform.isMacOS) {
       const { remote } = window.require("electron");
       const setButtonPos = () => remote.getCurrentWindow().setWindowButtonPosition({ x: 16, y: 16 });
       setButtonPos();
       window.addEventListener("resize", setButtonPos);
-    } else if (process.platform === "win32") {
+    } else if (Platform.isWin) {
       await this.initializeWallpaper();
       document.body.classList.add("is-translucent");
     }
@@ -165,7 +165,7 @@ export default class CupertinoCompanion extends Plugin {
   }
 
   private async getWallpaperPath(): Promise<string> {
-    if (process.platform !== "win32") return "";
+    if (!Platform.isWin) return "";
     try {
       const { stdout } = await this.exec(`powershell -command "(Get-ItemProperty -Path 'HKCU:\\Control Panel\\Desktop' -Name Wallpaper).Wallpaper"`);
       return stdout.trim();

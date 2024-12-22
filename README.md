@@ -1,6 +1,6 @@
 # Cupertino Companion for Obsidian
 
-Cupertino Companion is visual extension for Cupertino for Obsidian.
+Visual extension for Cupertino theme.
 
 Please refer to the [main repo](https://github.com/aaaaalexis/obsidian-cupertino) for more information.
 

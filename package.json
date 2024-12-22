@@ -1,6 +1,6 @@
 {
-  "name": "obsidian-cupertino-companion",
-  "version": "1.0.0",
+  "name": "cupertino-companion",
+  "version": "1.0.1",
   "description": "Visual extension for Cupertino",
   "main": "main.js",
   "scripts": {

@@ -1,9 +1,9 @@
 {
-  "id": "obsidian-cupertino-companion",
+  "id": "cupertino-companion",
   "name": "Cupertino Companion",
-  "version": "1.0.0",
-  "minAppVersion": "1.5.7",
-  "description": "Visual extension for Cupertino",
+  "version": "1.0.1",
+  "minAppVersion": "1.6.1",
+  "description": "Visual extension for Cupertino theme.",
   "author": "Alexis C",
   "isDesktopOnly": true
 }
